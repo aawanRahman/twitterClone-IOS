@@ -142,6 +142,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <connections>
+                                    <action selector="didTextChanged:" destination="Yxa-6e-zMH" eventType="editingChanged" id="OIJ-9h-uyI"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ue-Zu-nnh">
                                 <rect key="frame" x="20" y="221" width="374" height="45"/>
@@ -150,7 +153,16 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="didTextChanged:" destination="Yxa-6e-zMH" eventType="editingChanged" id="bBQ-9L-EXC"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3y-MW-2Jf">
+                                <rect key="frame" x="186" y="354" width="42" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -161,9 +173,11 @@
                             <constraint firstItem="477-Za-Efb" firstAttribute="bottom" secondItem="ZvS-hG-l1t" secondAttribute="bottom" id="CPt-Yr-oeF"/>
                             <constraint firstItem="xHK-mO-2XH" firstAttribute="leading" secondItem="ZvS-hG-l1t" secondAttribute="leading" id="GCo-NQ-CwU"/>
                             <constraint firstItem="ZvS-hG-l1t" firstAttribute="trailing" secondItem="5ue-Zu-nnh" secondAttribute="trailing" constant="20" id="HBF-sy-JH2"/>
+                            <constraint firstItem="m3y-MW-2Jf" firstAttribute="centerX" secondItem="5ue-Zu-nnh" secondAttribute="centerX" id="PVM-0g-TPz"/>
                             <constraint firstItem="5ue-Zu-nnh" firstAttribute="top" secondItem="fSN-vg-fAZ" secondAttribute="bottom" constant="43" id="SwM-D0-boo"/>
                             <constraint firstItem="5ue-Zu-nnh" firstAttribute="height" secondItem="fSN-vg-fAZ" secondAttribute="height" id="T1W-TP-CL1"/>
                             <constraint firstItem="xHK-mO-2XH" firstAttribute="top" secondItem="ZvS-hG-l1t" secondAttribute="top" id="XXh-Ut-syn"/>
+                            <constraint firstItem="m3y-MW-2Jf" firstAttribute="top" secondItem="5ue-Zu-nnh" secondAttribute="bottom" constant="88" id="YRM-e4-rtc"/>
                             <constraint firstItem="ZvS-hG-l1t" firstAttribute="trailing" secondItem="5ue-Zu-nnh" secondAttribute="trailing" constant="116" id="bEa-dL-UzB"/>
                             <constraint firstItem="fSN-vg-fAZ" firstAttribute="centerX" secondItem="ZvS-hG-l1t" secondAttribute="centerX" id="dgk-Hu-z0U"/>
                             <constraint firstItem="UYs-BI-d86" firstAttribute="leading" secondItem="ZvS-hG-l1t" secondAttribute="leading" constant="20" id="eSq-8a-Yae"/>
@@ -184,6 +198,7 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="fSN-vg-fAZ" id="o1E-Xz-reR"/>
+                        <outlet property="errorMessage" destination="m3y-MW-2Jf" id="5Lj-UB-UPW"/>
                         <outlet property="password" destination="5ue-Zu-nnh" id="swz-3y-ah9"/>
                         <outlet property="signUp" destination="1ZQ-bE-ALR" id="rBf-Ke-VkM"/>
                     </connections>
